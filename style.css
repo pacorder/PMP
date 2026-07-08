@@ -186,7 +186,7 @@ html {
 
 /* Glassmorphism navigation bar */
 .premium-navbar {
-    background: rgba(255, 255, 255, 0.85);
+    background-color: #ffffff;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 }
