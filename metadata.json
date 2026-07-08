@@ -1,0 +1,8 @@
+{
+  "name": "PMP Master Exam",
+  "description": "Domina el examen PMP con exámenes de práctica gratuitos y un curso completo basado en la 7.ª edición del PMBOK®.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

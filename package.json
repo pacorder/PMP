@@ -1,0 +1,16 @@
+{
+  "name": "pmp-master-exam",
+  "version": "1.0.0",
+  "description": "PMP Master Exam Practice and Blog",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "echo 'No build required for static assets'",
+    "start": "node server.js",
+    "lint": "echo 'No linting required'"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
