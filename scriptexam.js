@@ -70,31 +70,36 @@ document.addEventListener('DOMContentLoaded', function() {
         
         Object.values(examData).forEach(exam => {
             const examCard = document.createElement('div');
-            examCard.className = `exam-card bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-200 cursor-pointer`;
+            examCard.className = `premium-card p-6 cursor-pointer relative overflow-hidden flex flex-col justify-between h-full group transition-all duration-300 hover:-translate-y-1.5`;
             examCard.setAttribute('data-exam', exam.id);
             
-            const colorClasses = {
-                blue: 'bg-blue-100 text-blue-800',
-                green: 'bg-green-100 text-green-800',
-                purple: 'bg-purple-100 text-purple-800',
-                yellow: 'bg-yellow-100 text-yellow-800',
-                red: 'bg-red-100 text-red-800',
-                indigo: 'bg-indigo-100 text-indigo-800',
-                pink: 'bg-pink-100 text-pink-800',
-                orange: 'bg-orange-100 text-orange-800',
-                teal: 'bg-teal-100 text-teal-800'
+            const badgeColors = {
+                blue: 'bg-blue-50 border-blue-100 text-blue-700',
+                green: 'bg-emerald-50 border-emerald-100 text-emerald-700',
+                purple: 'bg-purple-50 border-purple-100 text-purple-700',
+                yellow: 'bg-amber-50 border-amber-100 text-amber-700',
+                red: 'bg-rose-50 border-rose-100 text-rose-700',
+                indigo: 'bg-indigo-50 border-indigo-100 text-indigo-700',
+                pink: 'bg-pink-50 border-pink-100 text-pink-700',
+                orange: 'bg-orange-50 border-orange-100 text-orange-700',
+                teal: 'bg-teal-50 border-teal-100 text-teal-700'
             };
             
             examCard.innerHTML = `
-                <div class="flex items-center justify-between mb-4">
-                    <span class="inline-block px-3 py-1 ${colorClasses[exam.color]} rounded-full text-sm font-medium">${exam.name}</span>
-                    <span class="text-gray-500 text-sm">${exam.questions.length} preguntas</span>
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="inline-block px-3 py-1 ${badgeColors[exam.color] || 'bg-slate-50 border-slate-100 text-slate-700'} border rounded-full text-xs font-bold tracking-wide uppercase">${exam.name.split(':')[0]}</span>
+                        <span class="text-slate-400 text-xs font-semibold flex items-center">
+                            <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            ${exam.questions.length} preguntas
+                        </span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-blue-600 transition-colors duration-200">${exam.name}</h3>
+                    <p class="text-slate-500 text-xs md:text-sm line-clamp-3 mb-6 leading-relaxed">${exam.description}</p>
                 </div>
-                <h3 class="text-lg font-semibold text-gray-800 mb-2">${exam.name}</h3>
-                <p class="text-gray-600 text-sm mb-4">${exam.description}</p>
-                <div class="flex items-center text-blue-600 font-medium">
-                    <span>Iniciar examen</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2">
+                <div class="flex items-center text-blue-600 font-bold text-sm mt-auto pt-4 border-t border-slate-100">
+                    <span>Iniciar Examen</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ml-1.5 transform group-hover:translate-x-1 transition-transform duration-200">
                         <polyline points="9 18 15 12 9 6"></polyline>
                     </svg>
                 </div>
@@ -155,13 +160,14 @@ document.addEventListener('DOMContentLoaded', function() {
         // Mostrar opciones
         optionsContainer.innerHTML = '';
         question.options.forEach((option, i) => {
+            const isSelected = userAnswers[index] === i;
             const optionElement = document.createElement('div');
-            optionElement.className = `option-item flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer transition-all duration-200 ${userAnswers[index] === i ? 'selected' : ''}`;
+            optionElement.className = `option-item flex items-center p-4 border rounded-xl cursor-pointer transition-all duration-200 ${isSelected ? 'selected ring-2 ring-blue-500/20' : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50/50'}`;
             optionElement.innerHTML = `
-                <div class="flex items-center justify-center w-6 h-6 rounded-full border border-gray-300 mr-3 flex-shrink-0">
-                    <span class="text-sm font-medium">${String.fromCharCode(65 + i)}</span>
+                <div class="option-badge flex items-center justify-center w-8 h-8 rounded-full font-bold mr-3.5 flex-shrink-0 transition-colors duration-200 ${isSelected ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'}">
+                    <span class="text-sm">${String.fromCharCode(65 + i)}</span>
                 </div>
-                <span>${option}</span>
+                <span class="text-slate-700 text-sm md:text-base font-medium leading-relaxed">${option}</span>
             `;
             
             optionElement.addEventListener('click', () => selectOption(i));
@@ -181,10 +187,17 @@ document.addEventListener('DOMContentLoaded', function() {
         // Actualizar visualización de opciones
         const options = document.querySelectorAll('.option-item');
         options.forEach((option, i) => {
+            const badge = option.querySelector('.option-badge');
             if (i === optionIndex) {
-                option.classList.add('selected');
+                option.className = `option-item flex items-center p-4 border rounded-xl cursor-pointer transition-all duration-200 selected ring-2 ring-blue-500/20`;
+                if (badge) {
+                    badge.className = `option-badge flex items-center justify-center w-8 h-8 rounded-full font-bold mr-3.5 flex-shrink-0 transition-colors duration-200 bg-blue-600 text-white`;
+                }
             } else {
-                option.classList.remove('selected');
+                option.className = `option-item flex items-center p-4 border rounded-xl cursor-pointer transition-all duration-200 border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50/50`;
+                if (badge) {
+                    badge.className = `option-badge flex items-center justify-center w-8 h-8 rounded-full font-bold mr-3.5 flex-shrink-0 transition-colors duration-200 bg-slate-100 text-slate-600`;
+                }
             }
         });
     }
@@ -259,10 +272,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Actualizar información de resultados
         scorePercentage.textContent = `${score.toFixed(1)}%`;
-        scorePercentage.className = `text-5xl font-bold mb-4 ${passed ? 'text-green-600' : 'text-red-600'}`;
+        scorePercentage.className = `text-5xl md:text-6xl font-extrabold tracking-tight mb-4 ${passed ? 'text-emerald-600' : 'text-rose-600'}`;
         
-        resultMessage.textContent = passed ? '¡Felicidades! Has aprobado el examen.' : 'Necesitas más preparación. Sigue estudiando.';
-        resultMessage.className = `text-xl font-semibold mb-2 ${passed ? 'text-green-600' : 'text-red-600'}`;
+        resultMessage.textContent = passed ? '¡Excelente trabajo! Has aprobado satisfactoriamente.' : 'No has alcanzado la puntuación de aprobación. ¡Sigue adelante!';
+        resultMessage.className = `text-lg md:text-xl font-extrabold ${passed ? 'text-emerald-600' : 'text-rose-600'}`;
         
         examName.textContent = `Examen: ${examData[currentExam].name}`;
         
@@ -273,29 +286,41 @@ document.addEventListener('DOMContentLoaded', function() {
             const isCorrect = userAnswer === question.correctAnswer;
             
             const questionResult = document.createElement('div');
-            questionResult.className = `p-4 border rounded-lg ${isCorrect ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'}`;
+            questionResult.className = `p-6 border rounded-2xl ${isCorrect ? 'bg-emerald-50/40 border-emerald-200/60' : 'bg-rose-50/40 border-rose-200/60'} space-y-4 shadow-sm`;
             
             questionResult.innerHTML = `
-                <div class="flex justify-between items-start mb-2">
-                    <h3 class="font-semibold text-gray-800">Pregunta ${index + 1}</h3>
-                    <span class="inline-block px-2 py-1 rounded text-xs font-medium ${isCorrect ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}">
+                <div class="flex justify-between items-start">
+                    <div class="space-y-1">
+                        <h4 class="font-bold text-slate-900 text-base md:text-lg">Pregunta ${index + 1}</h4>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Dominio:</span>
+                            <span class="px-2 py-0.5 bg-slate-100 border border-slate-200/60 text-slate-600 rounded text-[10px] font-bold uppercase">${question.domain}</span>
+                        </div>
+                    </div>
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold ${isCorrect ? 'bg-emerald-100 text-emerald-800 border border-emerald-200/60' : 'bg-rose-100 text-rose-800 border border-rose-200/60'}">
+                        <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="${isCorrect ? 'M5 13l4 4L19 7' : 'M6 18L18 6M6 6l12 12'}"></path></svg>
                         ${isCorrect ? 'Correcta' : 'Incorrecta'}
                     </span>
                 </div>
-                <p class="text-gray-700 mb-2">${question.question}</p>
-                <div class="mb-2">
-                    <p class="text-sm font-medium text-gray-600">Tu respuesta:</p>
-                    <p class="${isCorrect ? 'text-green-700' : 'text-red-700'}">${userAnswer !== null ? question.options[userAnswer] : 'No respondida'}</p>
-                </div>
-                ${!isCorrect ? `
-                    <div class="mb-2">
-                        <p class="text-sm font-medium text-gray-600">Respuesta correcta:</p>
-                        <p class="text-green-700">${question.options[question.correctAnswer]}</p>
+                <p class="text-slate-800 font-medium text-sm md:text-base leading-relaxed">${question.question}</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                    <div class="p-3 bg-white/60 border border-slate-200/40 rounded-xl">
+                        <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Tu respuesta:</p>
+                        <p class="text-sm font-semibold ${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${userAnswer !== null ? `(${String.fromCharCode(65 + userAnswer)}) ${question.options[userAnswer]}` : 'No respondida'}</p>
                     </div>
-                ` : ''}
-                <div>
-                    <p class="text-sm font-medium text-gray-600">Explicación:</p>
-                    <p class="text-gray-700">${question.explanation}</p>
+                    ${!isCorrect ? `
+                    <div class="p-3 bg-white/60 border border-slate-200/40 rounded-xl">
+                        <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Respuesta correcta:</p>
+                        <p class="text-sm font-semibold text-emerald-700">(${String.fromCharCode(65 + question.correctAnswer)}) ${question.options[question.correctAnswer]}</p>
+                    </div>
+                    ` : ''}
+                </div>
+                <div class="p-4 bg-blue-50/40 border border-blue-100/50 rounded-xl space-y-1">
+                    <p class="text-xs font-bold text-blue-700 uppercase tracking-wider flex items-center">
+                        <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Explicación PMP MASTER 8:
+                    </p>
+                    <p class="text-slate-600 text-xs md:text-sm leading-relaxed">${question.explanation}</p>
                 </div>
             `;
             

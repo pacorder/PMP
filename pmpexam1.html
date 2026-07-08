@@ -84,52 +84,50 @@
         }
     </style>
 </head>
-<body>
+<body class="min-h-screen bg-slate-50 text-slate-800 antialiased dot-grid selection:bg-blue-500 selection:text-white">
     <!-- Header with Modern, Dynamic Navigation -->
-    <header class="px-4 lg:px-6 h-20 flex items-center border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+    <header class="px-4 lg:px-6 h-20 flex items-center border-b border-slate-200/80 premium-navbar sticky top-0 z-50 transition-all duration-300">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo / Brand -->
-            <div class="flex items-center space-x-3">
-                <div class="bg-gradient-to-br from-blue-600 to-indigo-700 p-2.5 rounded-xl shadow-md">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <div class="flex items-center space-x-3 group cursor-pointer" onclick="window.location.href='index.html'">
+                <div class="bg-gradient-to-br from-blue-600 to-indigo-700 p-2.5 rounded-xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="8" r="7"></circle>
                         <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
                     </svg>
                 </div>
-                <span class="text-xl font-bold bg-gradient-to-r from-gray-900 to-blue-700 bg-clip-text text-transparent">
-                    PMP MASTER 8
-                </span>
+                <div class="flex flex-col">
+                    <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-slate-950 via-blue-900 to-indigo-950 bg-clip-text text-transparent">
+                        PMP MASTER 8
+                    </span>
+                    <span class="text-[10px] text-blue-600 font-bold uppercase tracking-widest -mt-1">
+                        Ecosistema Premium
+                    </span>
+                </div>
             </div>
 
             <!-- Navigation Menu -->
-            <nav class="hidden md:flex items-center space-x-1">
-                <a href="index.html" class="px-4 py-2.5 rounded-lg font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 flex items-center space-x-1.5">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                    </svg>
-                    <span>Inicio</span>
-                </a>
-                <a href="tips.html" class="px-4 py-2.5 rounded-lg font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200">Tips</a>
-                <a href="blog.html" class="px-4 py-2.5 rounded-lg font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200">Blog</a>
-                <a href="pmpexam1.html" class="px-4 py-2.5 rounded-lg font-medium text-blue-600 bg-blue-50">Exámenes Gratis</a>
-                <a href="contacto.html" class="px-4 py-2.5 rounded-lg font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200">Contacto</a>
-                <a href="https://www.udemy.com/course/pmp-exam-prep-mastery-based-on-pmbok-7th-edition/?referralCode=254FB14904B38D95B252" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-lg font-medium text-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-200 flex items-center space-x-1.5 group">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:animate-pulse">
+            <nav class="hidden md:flex items-center space-x-2">
+                <a href="index.html" class="px-4 py-2 rounded-lg font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-100/70 transition-all duration-200">Inicio</a>
+                <a href="tips.html" class="px-4 py-2 rounded-lg font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-100/70 transition-all duration-200">Tips</a>
+                <a href="blog.html" class="px-4 py-2 rounded-lg font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-100/70 transition-all duration-200">Blog</a>
+                <a href="pmpexam1.html" class="px-4 py-2 rounded-lg font-semibold text-blue-600 bg-blue-50/80 transition-all duration-200 flex items-center space-x-1.5">Exámenes Gratis</a>
+                <a href="contacto.html" class="px-4 py-2 rounded-lg font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-100/70 transition-all duration-200">Contacto</a>
+                
+                <div class="h-6 w-[1px] bg-slate-200 mx-2"></div>
+                
+                <a href="https://www.udemy.com/course/pmp-exam-prep-mastery-based-on-pmbok-7th-edition/?referralCode=254FB14904B38D95B252" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 transition-all duration-200 flex items-center space-x-1.5 shadow-md shadow-blue-200/50 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:animate-pulse">
                         <polygon points="5 3 19 12 5 21 5 3"></polygon>
                     </svg>
                     <span>Curso en Udemy</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                        <polyline points="15 3 21 3 21 9"></polyline>
-                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
                 </a>
             </nav>
 
-            <!-- Mobile Menu Button (optional for future expansion) -->
-            <div class="md:hidden">
-                <button class="p-2 rounded-lg text-gray-700 hover:bg-gray-100">
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center space-x-2">
+                <a href="contacto.html" class="text-xs bg-blue-50 text-blue-600 px-3 py-1.5 rounded-lg font-semibold border border-blue-100">Contacto</a>
+                <button class="p-2 rounded-lg text-slate-700 hover:bg-slate-100">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="3" y1="12" x2="21" y2="12"></line>
                         <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -140,75 +138,79 @@
         </div>
     </header>
 
-    <div class="container mx-auto px-4 py-8">
+    <div class="container mx-auto px-4 py-12">
         <!-- Welcome Section -->
-        <div id="welcome-section" class="welcome-container max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8 mb-8">
-            <div class="welcome-header text-center mb-8">
-                <h1 class="text-3xl font-bold text-gray-900 mb-4">Exámenes de Práctica PMP</h1>
-                <p class="text-xl text-blue-600 font-semibold">Ecosistema PMP MASTER 8</p>
+        <div id="welcome-section" class="welcome-container max-w-4xl mx-auto bg-white rounded-3xl border border-slate-200/80 p-8 md:p-12 shadow-xl mb-12 relative overflow-hidden">
+            <div class="absolute -right-16 -top-16 w-36 h-36 bg-blue-500/5 rounded-full pointer-events-none"></div>
+            
+            <div class="welcome-header text-center mb-8 space-y-3">
+                <div class="inline-flex items-center space-x-2 bg-blue-50 border border-blue-200/50 px-3 py-1 rounded-full text-blue-700 text-xs font-bold tracking-wide uppercase">
+                    SIMULADORES 2026
+                </div>
+                <h1 class="text-3xl md:text-4xl font-extrabold text-slate-950">Exámenes de Práctica de Alto Nivel</h1>
+                <p class="text-lg text-blue-600 font-bold uppercase tracking-wider">Ecosistema PMP MASTER 8</p>
             </div>
             
-            <div class="welcome-content">
-                <div class="description-section mb-8">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Sobre estos Exámenes de Práctica</h2>
-                    <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+            <div class="welcome-content space-y-8">
+                <div class="description-section space-y-4">
+                    <h2 class="text-xl md:text-2xl font-bold text-slate-900">Sobre la Preparación Premium</h2>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base">
                         Estos exámenes de práctica de alto rendimiento están estructurados bajo el marco avanzado <strong>PMP MASTER 8</strong>, diseñado por Patricio Cordero, PMP. A diferencia de las metodologías tradicionales o enfoques estáticos que se limitaban a memorizar procesos rígidos, PMP MASTER 8 fomenta el pensamiento situacional ágil, híbrido y adaptativo enfocado en la entrega de valor continua y el liderazgo de equipos de alto desempeño.
                     </p>
-                    <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base">
                         Cada simulador consta de <strong>25 preguntas situacionales de opción múltiple</strong> meticulosamente diseñadas para imitar la complejidad y el formato real del examen oficial de certificación PMP. Evaluarás tu comprensión en los tres dominios fundamentales del examen: <strong>Personas (People)</strong>, <strong>Procesos (Process)</strong> y <strong>Entorno de Negocio (Business Environment)</strong>.
                     </p>
-                    <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base">
                         Tendrás un límite de <strong>25 minutos</strong> por examen para simular la presión de tiempo real. Al finalizar cada prueba, recibirás explicaciones detalladas y análisis exhaustivos sobre cada opción, permitiéndote identificar tus brechas de aprendizaje y corregirlas al instante.
                     </p>
                 </div>
                 
-                <div class="exam-info flex justify-center mb-8">
-                    <div class="info-card bg-blue-50 border-2 border-blue-200 rounded-xl p-6 max-w-md">
-                        <h3 class="text-xl font-bold text-blue-800 mb-4 text-center">Características de los Exámenes</h3>
-                        <ul class="space-y-2">
-                            <li class="flex items-center text-gray-700">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>9 exámenes especializados</span>
+                <div class="exam-info flex justify-center">
+                    <div class="info-card bg-slate-50 border border-slate-200/80 rounded-2xl p-6 md:p-8 w-full max-w-lg shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-5 text-center">Estructura del Simulador</h3>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                            <li class="flex items-center text-slate-600">
+                                <svg class="w-5 h-5 text-emerald-500 mr-2.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                                <span>9 Módulos Clave</span>
                             </li>
-                            <li class="flex items-center text-gray-700">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>25 preguntas por examen</span>
+                            <li class="flex items-center text-slate-600">
+                                <svg class="w-5 h-5 text-emerald-500 mr-2.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                                <span>25 Casos por Test</span>
                             </li>
-                            <li class="flex items-center text-gray-700">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>Tiempo límite: 25 minutos</span>
+                            <li class="flex items-center text-slate-600">
+                                <svg class="w-5 h-5 text-emerald-500 mr-2.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Límite de 25 Minutos</span>
                             </li>
-                            <li class="flex items-center text-gray-700">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>Alineado a PMP MASTER 8</span>
+                            <li class="flex items-center text-slate-600">
+                                <svg class="w-5 h-5 text-emerald-500 mr-2.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Bajo PMP MASTER 8</span>
                             </li>
-                            <li class="flex items-center text-gray-700">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>Enfoque situacional y adaptativo</span>
+                            <li class="flex items-center text-slate-600">
+                                <svg class="w-5 h-5 text-emerald-500 mr-2.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Enfoque Adaptativo</span>
                             </li>
-                            <li class="flex items-center text-gray-700">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>Explicaciones detalladas al finalizar</span>
-                            </li>
-                            <li class="flex items-center text-gray-700">
-                                <i class="fas fa-check text-green-500 mr-2"></i>
-                                <span>Indicación del dominio por pregunta</span>
+                            <li class="flex items-center text-slate-600">
+                                <svg class="w-5 h-5 text-emerald-500 mr-2.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Análisis Detallados</span>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <div class="start-button-container text-center">
-                <button id="start-exam-btn" class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-indigo-800 transition-all duration-200 shadow-lg">
-                    Ver Todos los Exámenes
+            <div class="start-button-container text-center pt-4">
+                <button id="start-exam-btn" class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-indigo-800 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-lg shadow-blue-500/20">
+                    Explorar Todos los Exámenes
                 </button>
             </div>
         </div>
 
         <!-- Exam Selection Section -->
-        <div id="exam-selection" class="max-w-6xl mx-auto bg-white rounded-2xl shadow-xl p-8 mb-8" style="display: none;">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Selecciona un Examen de Práctica</h2>
+        <div id="exam-selection" class="max-w-6xl mx-auto bg-white rounded-3xl border border-slate-200/80 shadow-xl p-8 md:p-10 mb-12" style="display: none;">
+            <div class="text-center mb-10 space-y-2">
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-950">Módulos de Examen PMP MASTER 8</h2>
+                <p class="text-slate-600 text-sm max-w-lg mx-auto">Selecciona el área de conocimiento o dominio que deseas practicar el día de hoy.</p>
+            </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="exams-container">
                 <!-- Los exámenes se cargarán dinámicamente aquí -->
@@ -216,44 +218,47 @@
         </div>
 
         <!-- Exam Section (hidden initially) -->
-        <div id="exam-section" class="exam-container max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden" style="display: none;">
+        <div id="exam-section" class="exam-container max-w-4xl mx-auto bg-white rounded-3xl border border-slate-200/80 shadow-2xl overflow-hidden" style="display: none;">
             <!-- Header -->
-            <div class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-6">
-                <div class="flex justify-between items-center mb-4">
-                    <h1 class="text-2xl font-bold" id="exam-title">Examen de Práctica PMP</h1>
-                    <div class="text-right">
-                        <div class="text-sm opacity-90">Tiempo restante</div>
-                        <div class="text-xl font-bold" id="time-display">25:00</div>
+            <div class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-6 md:p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h1 class="text-xl md:text-2xl font-extrabold tracking-tight" id="exam-title">Examen de Práctica PMP</h1>
+                    <div class="text-right flex items-center space-x-3 bg-black/20 px-4 py-2 rounded-xl">
+                        <svg class="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <div class="text-left">
+                            <div class="text-[10px] text-blue-200 font-bold uppercase tracking-wider">Tiempo restante</div>
+                            <div class="text-lg md:text-xl font-mono font-bold leading-none" id="time-display">25:00</div>
+                        </div>
                     </div>
                 </div>
                 <div class="flex items-center justify-between">
-                    <span class="text-sm opacity-90" id="question-counter">Pregunta 1 de 25</span>
-                    <div class="w-32 bg-blue-500 rounded-full h-2">
-                        <div id="progress-fill" class="bg-white h-2 rounded-full transition-all duration-300" style="width: 0%;"></div>
+                    <span class="text-sm font-semibold opacity-90" id="question-counter">Pregunta 1 de 25</span>
+                    <div class="w-48 bg-blue-900/60 rounded-full h-2.5 overflow-hidden border border-blue-500/20">
+                        <div id="progress-fill" class="bg-white h-full rounded-full transition-all duration-300" style="width: 0%;"></div>
                     </div>
                 </div>
             </div>
 
             <!-- Question Area -->
-            <div class="p-8">
-                <div class="mb-6">
-                    <span class="font-semibold text-gray-700 mr-2">Dominio:</span>
-                    <span id="domain-text" class="inline-block px-3 py-1 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-full text-sm font-medium"></span>
+            <div class="p-6 md:p-10 space-y-6">
+                <div class="flex items-center space-x-2">
+                    <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Dominio actual:</span>
+                    <span id="domain-text" class="inline-block px-3 py-1 bg-blue-50 border border-blue-100 text-blue-700 rounded-full text-xs font-bold uppercase tracking-wide"></span>
                 </div>
-                <h2 id="question-text" class="text-xl font-semibold text-gray-800 mb-6 leading-relaxed"></h2>
-                <div id="options-container" class="space-y-4"></div>
+                <h2 id="question-text" class="text-lg md:text-xl font-bold text-slate-900 leading-relaxed"></h2>
+                <div id="options-container" class="space-y-3.5"></div>
             </div>
 
             <!-- Navigation -->
-            <div class="flex justify-between items-center p-6 bg-gray-50 border-t">
-                <button id="prev-btn" class="px-6 py-2 bg-gray-300 text-gray-700 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-400 transition-colors">
+            <div class="flex justify-between items-center p-6 bg-slate-50 border-t border-slate-100">
+                <button id="prev-btn" class="px-5 py-3 bg-white border border-slate-300 text-slate-700 font-semibold rounded-xl hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white transition-all duration-200">
                     Anterior
                 </button>
                 <div class="flex gap-4">
-                    <button id="next-btn" class="px-6 py-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 shadow-lg">
+                    <button id="next-btn" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-bold rounded-xl hover:from-blue-700 hover:to-indigo-800 disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 shadow-md">
                         Siguiente
                     </button>
-                    <button id="submit-btn" class="px-6 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:from-green-600 hover:to-emerald-700 transition-all duration-200 shadow-lg" style="display: none;">
+                    <button id="submit-btn" class="px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold rounded-xl hover:from-emerald-600 hover:to-teal-700 disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 shadow-md" style="display: none;">
                         Finalizar Examen
                     </button>
                 </div>
@@ -261,26 +266,30 @@
         </div>
 
         <!-- Results Modal -->
-        <div id="results-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" style="display: none;">
-            <div class="bg-white rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto mx-4">
-                <div class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-6 rounded-t-2xl">
-                    <h2 class="text-2xl font-bold text-center">Resultados del Examen</h2>
+        <div id="results-modal" class="fixed inset-0 bg-slate-950/65 backdrop-blur-sm flex items-center justify-center z-50 p-4" style="display: none;">
+            <div class="bg-white rounded-3xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200/80 animate">
+                <div class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-6 md:p-8 rounded-t-3xl text-center">
+                    <h2 class="text-2xl font-extrabold tracking-tight">Resultados de tu Evaluación</h2>
+                    <p class="text-blue-200 text-xs font-semibold mt-1 uppercase tracking-wider">Ecosistema PMP MASTER 8</p>
                 </div>
-                <div class="p-6">
-                    <div class="text-center mb-8">
-                        <div id="score-percentage" class="text-5xl font-bold mb-4"></div>
-                        <div id="result-message" class="text-xl font-semibold mb-2"></div>
-                        <div id="exam-name" class="text-lg text-gray-600"></div>
+                <div class="p-6 md:p-10 space-y-8">
+                    <div class="text-center bg-slate-50 border border-slate-100 rounded-2xl p-6 md:p-8">
+                        <div id="score-percentage" class="text-5xl md:text-6xl font-extrabold tracking-tight mb-3"></div>
+                        <div id="result-message" class="text-lg md:text-xl font-bold mb-1"></div>
+                        <div id="exam-name" class="text-slate-500 text-sm font-medium"></div>
                     </div>
 
-                    <div id="detailed-results" class="space-y-6"></div>
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-2">Revisión Detallada de Preguntas</h3>
+                        <div id="detailed-results" class="space-y-6"></div>
+                    </div>
                 </div>
-                <div class="p-6 bg-gray-50 border-t text-center">
-                    <button id="restart-btn" class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-800 transition-all duration-200 shadow-lg mr-4">
+                <div class="p-6 bg-slate-50 border-t border-slate-100 text-center flex flex-col sm:flex-row gap-4 justify-center">
+                    <button id="restart-btn" class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-8 py-3.5 rounded-xl font-bold hover:from-blue-700 hover:to-indigo-800 transition-all duration-200 shadow-lg shadow-blue-500/10">
                         Reiniciar Examen
                     </button>
-                    <button id="back-to-exams-btn" class="bg-gradient-to-r from-gray-600 to-gray-700 text-white px-8 py-3 rounded-lg font-semibold hover:from-gray-700 hover:to-gray-800 transition-all duration-200 shadow-lg">
-                        Volver a Exámenes
+                    <button id="back-to-exams-btn" class="bg-white border border-slate-300 text-slate-700 px-8 py-3.5 rounded-xl font-semibold hover:bg-slate-50 transition-all duration-200">
+                        Volver a la Lista
                     </button>
                 </div>
             </div>
@@ -288,10 +297,15 @@
     </div>
 
     <!-- Footer -->
-    <footer class="py-8 bg-gray-900 text-gray-400 text-center mt-16 border-t border-gray-800">
-        <div class="container mx-auto px-4 space-y-4">
-            <p>&copy; 2026 PMP MASTER 8. Todos los derechos reservados.</p>
-            <div class="flex justify-center space-x-6 text-sm">
+    <footer class="py-12 bg-slate-900 text-slate-400 text-center mt-20 border-t border-slate-800">
+        <div class="container mx-auto px-4 space-y-6">
+            <div class="flex justify-center items-center space-x-2">
+                <span class="text-lg font-bold text-white">PMP MASTER 8</span>
+                <span class="text-[10px] bg-slate-800 text-slate-300 font-bold px-2 py-0.5 rounded-full">EDICIÓN 2026</span>
+            </div>
+            <p class="text-sm max-w-md mx-auto leading-relaxed">Plataforma premium e independiente para la preparación del examen de certificación PMP® bajo la dirección académica de Patricio Cordero, PMP.</p>
+            <p class="text-xs">&copy; 2026 PMP MASTER 8. Todos los derechos reservados.</p>
+            <div class="flex justify-center space-x-6 text-xs pt-2">
                 <a href="privacidad.html" class="hover:text-white transition-colors">Política de Privacidad</a>
                 <a href="terminos.html" class="hover:text-white transition-colors">Términos de Servicio</a>
                 <a href="cookies.html" class="hover:text-white transition-colors">Política de Cookies</a>
@@ -299,7 +313,7 @@
             </div>
         </div>
     </footer>
-   <script src="questions.js"></script>
+    <script src="questions.js"></script>
     <script src="scriptexam.js"></script>
 </body>
 </html>

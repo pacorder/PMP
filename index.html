@@ -59,43 +59,51 @@
 <script defer src="/_vercel/insights/script.js"></script>
   
 </head>
-<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+<body class="min-h-screen bg-slate-50 text-slate-800 antialiased dot-grid selection:bg-blue-500 selection:text-white">
 
 <!-- Header with Modern, Dynamic Navigation -->
-<header class="px-4 lg:px-6 h-20 flex items-center border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+<header class="px-4 lg:px-6 h-20 flex items-center border-b border-slate-200/80 premium-navbar sticky top-0 z-50 transition-all duration-300">
   <div class="container mx-auto flex justify-between items-center">
     <!-- Logo / Brand -->
-    <div class="flex items-center space-x-3">
-      <div class="bg-gradient-to-br from-blue-600 to-indigo-700 p-2.5 rounded-xl shadow-md">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <div class="flex items-center space-x-3 group cursor-pointer">
+      <div class="bg-gradient-to-br from-blue-600 to-indigo-700 p-2.5 rounded-xl shadow-md group-hover:scale-110 transition-transform duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="8" r="7"></circle>
           <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
         </svg>
       </div>
-      <span class="text-xl font-bold bg-gradient-to-r from-gray-900 to-blue-700 bg-clip-text text-transparent">
-        PMP MASTER 8
-      </span>
+      <div class="flex flex-col">
+        <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-slate-950 via-blue-900 to-indigo-950 bg-clip-text text-transparent">
+          PMP MASTER 8
+        </span>
+        <span class="text-[10px] text-blue-600 font-bold uppercase tracking-widest -mt-1">
+          Ecosistema Premium
+        </span>
+      </div>
     </div>
 
     <!-- Navigation Menu -->
-    <nav class="hidden md:flex items-center space-x-1">
-      <a href="index.html" class="px-4 py-2.5 rounded-lg font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 flex items-center space-x-1.5">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <nav class="hidden md:flex items-center space-x-2">
+      <a href="index.html" class="px-4 py-2 rounded-lg font-semibold text-blue-600 bg-blue-50/80 transition-all duration-200 flex items-center space-x-1.5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
           <polyline points="9 22 9 12 15 12 15 22"></polyline>
         </svg>
         <span>Inicio</span>
       </a>
-      <a href="tips.html" class="px-4 py-2.5 rounded-lg font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200">Tips</a>
-      <a href="blog.html" class="px-4 py-2.5 rounded-lg font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200">Blog</a>
-      <a href="pmpexam1.html" class="px-4 py-2.5 rounded-lg font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200">Exámenes Gratis</a>
-      <a href="contacto.html" class="px-4 py-2.5 rounded-lg font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200">Contacto</a>
-      <a href="https://www.udemy.com/course/pmp-exam-prep-mastery-based-on-pmbok-7th-edition/?referralCode=254FB14904B38D95B252" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-lg font-medium text-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-200 flex items-center space-x-1.5 group">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:animate-pulse">
+      <a href="tips.html" class="px-4 py-2 rounded-lg font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-100/70 transition-all duration-200">Tips</a>
+      <a href="blog.html" class="px-4 py-2 rounded-lg font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-100/70 transition-all duration-200">Blog</a>
+      <a href="pmpexam1.html" class="px-4 py-2 rounded-lg font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-100/70 transition-all duration-200">Exámenes Gratis</a>
+      <a href="contacto.html" class="px-4 py-2 rounded-lg font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-100/70 transition-all duration-200">Contacto</a>
+      
+      <div class="h-6 w-[1px] bg-slate-200 mx-2"></div>
+      
+      <a href="https://www.udemy.com/course/pmp-exam-prep-mastery-based-on-pmbok-7th-edition/?referralCode=254FB14904B38D95B252" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 transition-all duration-200 flex items-center space-x-1.5 shadow-md shadow-blue-200/50 group">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:animate-pulse">
           <polygon points="5 3 19 12 5 21 5 3"></polygon>
         </svg>
         <span>Curso en Udemy</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
           <polyline points="15 3 21 3 21 9"></polyline>
           <line x1="10" y1="14" x2="21" y2="3"></line>
@@ -105,8 +113,8 @@
 
     <!-- Mobile Menu Button -->
     <div class="md:hidden flex items-center space-x-2">
-      <a href="contacto.html" class="text-xs bg-blue-50 text-blue-600 px-2.5 py-1.5 rounded font-medium">Contacto</a>
-      <button class="p-2 rounded-lg text-gray-700 hover:bg-gray-100">
+      <a href="contacto.html" class="text-xs bg-blue-50 text-blue-600 px-3 py-1.5 rounded-lg font-semibold border border-blue-100">Contacto</a>
+      <button class="p-2 rounded-lg text-slate-700 hover:bg-slate-100">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -117,272 +125,303 @@
   </div>
 </header>
 
-  <!-- Hero Section -->
-  <section class="py-16 md:py-24">
-    <div class="container mx-auto px-4 text-center max-w-4xl">
-      <div class="animate-fade-in-up">
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Domina el Examen con <span class="text-blue-600">PMP MASTER 8</span>
-        </h1>
-        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-          Practica con simuladores interactivos de alto nivel basados en el ecosistema <strong>PMP MASTER 8</strong>,
-          el cual integra ágil/híbrido avanzado, principios de alto desempeño y entrega continua de valor empresarial.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="pmpexam1.html" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg">
-            Iniciar Simulador Gratis
-          </a>
-          <a href="https://www.udemy.com/course/pmp-exam-prep-mastery-based-on-pmbok-7th-edition/?referralCode=254FB14904B38D95B252" target="_blank" rel="noopener noreferrer" class="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors">
-            <div class="flex items-center justify-center space-x-2">
-              <!-- Graduation Cap -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"></path>
-                <path d="M6 12v5c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2v-5"></path>
+<!-- Hero Section with Premium Glow effects -->
+<section class="py-20 md:py-28 relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-blue-50/40 via-transparent to-transparent pointer-events-none"></div>
+  <div class="container mx-auto px-4 text-center max-w-4xl relative">
+    <div class="animate-fade-in-up space-y-6">
+      
+      <!-- Premium Badge -->
+      <div class="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 border border-blue-500/20 px-4 py-1.5 rounded-full text-blue-700 text-xs font-bold tracking-wider uppercase shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+        <span>Estándar Avanzado de Preparación 2026</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-950 mb-6 leading-tight">
+        Domina el Examen Oficial con <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-indigo-800 bg-clip-text text-transparent">PMP MASTER 8</span>
+      </h1>
+      <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+        Practica con simuladores interactivos de alto rendimiento bajo la innovadora metodología de <strong>Patricio Cordero, PMP</strong>. Diseñado para fomentar la toma de decisiones estratégicas ágiles, híbridas y adaptativas.
+      </p>
+
+      <!-- Key Metrics Quick Bar -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto py-8">
+        <div class="bg-white/80 backdrop-blur-sm border border-slate-200/60 p-4 rounded-2xl shadow-sm">
+          <div class="text-2xl font-bold text-slate-950">175+</div>
+          <div class="text-xs text-slate-500 font-medium mt-0.5">Preguntas Clave</div>
+        </div>
+        <div class="bg-white/80 backdrop-blur-sm border border-slate-200/60 p-4 rounded-2xl shadow-sm">
+          <div class="text-2xl font-bold text-slate-950">7 Módulos</div>
+          <div class="text-xs text-slate-500 font-medium mt-0.5">Exámenes Gratis</div>
+        </div>
+        <div class="bg-white/80 backdrop-blur-sm border border-slate-200/60 p-4 rounded-2xl shadow-sm">
+          <div class="text-2xl font-bold text-slate-950">100%</div>
+          <div class="text-xs text-slate-500 font-medium mt-0.5">Casos Situacionales</div>
+        </div>
+        <div class="bg-white/80 backdrop-blur-sm border border-slate-200/60 p-4 rounded-2xl shadow-sm">
+          <div class="text-2xl font-bold text-slate-950">Gratis</div>
+          <div class="text-xs text-slate-500 font-medium mt-0.5">Acceso Ilimitado</div>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+        <a href="pmpexam1.html" class="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-indigo-800 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-lg shadow-blue-500/25 pulse-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <span>Iniciar Simulador Gratis</span>
+        </a>
+        <a href="https://www.udemy.com/course/pmp-exam-prep-mastery-based-on-pmbok-7th-edition/?referralCode=254FB14904B38D95B252" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center border border-slate-300 bg-white text-slate-800 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-slate-50 hover:border-slate-400 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-blue-600">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"></path>
+            <path d="M6 12v5c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2v-5"></path>
+          </svg>
+          <span>Curso Completo en Udemy</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="py-20 bg-white border-t border-slate-100">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-slate-950 mb-4 tracking-tight">
+        ¿Por qué PMP MASTER 8 es el Estándar de Oro?
+      </h2>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        Olvídate de la memorización pasiva. Nuestra metodología de alto rendimiento se centra en el pensamiento situacional complejo.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Feature 1 -->
+      <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100/80 premium-card text-left">
+        <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white mb-6 shadow-md shadow-blue-500/10">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="6"></circle>
+            <circle cx="12" cy="12" r="2"></circle>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-3">Enfoque de Valor</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Prioriza la entrega de valor real continuo en el negocio por encima de los procesos estáticos tradicionales.</p>
+      </div>
+      <!-- Feature 2 -->
+      <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100/80 premium-card text-left">
+        <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white mb-6 shadow-md shadow-blue-500/10">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-3">Simulación Real</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Entrena con temporizadores controlados de 25 minutos para gestionar la presión real del examen del PMI.</p>
+      </div>
+      <!-- Feature 3 -->
+      <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100/80 premium-card text-left">
+        <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white mb-6 shadow-md shadow-blue-500/10">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-3">Casos Situacionales</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Preguntas de opción múltiple estructuradas de forma exacta al formato oficial del examen PMP.</p>
+      </div>
+      <!-- Feature 4 -->
+      <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100/80 premium-card text-left">
+        <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white mb-6 shadow-md shadow-blue-500/10">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-3">Explicación Exhaustiva</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">No solo sepas si acertaste; comprende la justificación situacional y metodológica de cada opción al instante.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Exams Section -->
+<section class="py-20 bg-slate-50 border-t border-slate-100">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto space-y-8">
+      <!-- Exam Card Master Banner -->
+      <div class="bg-white rounded-3xl border border-slate-200/80 p-8 md:p-10 shadow-xl relative overflow-hidden group">
+        <div class="absolute -right-16 -top-16 w-36 h-36 bg-blue-500/5 rounded-full pointer-events-none"></div>
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 relative">
+          <div class="flex-1 space-y-3">
+            <span class="inline-block bg-blue-100 text-blue-700 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              Simulador Gratuito de Alto Rendimiento
+            </span>
+            <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight">
+              Ecosistema Integrado PMP MASTER 8
+            </h3>
+            <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+              Evalúa tu nivel hoy mismo. Accede a simuladores gratuitos organizados en los dominios más críticos: <strong>Personas (People)</strong>, <strong>Procesos (Process)</strong> y <strong>Entorno de Negocio (Business Environment)</strong>.
+            </p>
+          </div>
+          <div class="flex items-center">
+            <a href="pmpexam1.html" class="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 hover:scale-[1.03] active:scale-[0.97] transition-all duration-300 shadow-md shadow-blue-500/10 whitespace-nowrap">
+              <span>Comenzar Simulaciones</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ml-2">
+                <polyline points="9 18 15 12 9 6"></polyline>
               </svg>
-              <span>Curso Completo en Udemy</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features -->
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          ¿Por qué PMP MASTER 8?
-        </h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          Diseñados bajo el marco moderno e integrador de PMP MASTER 8, superando los límites tradicionales.
-        </p>
-      </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Feature 1 -->
-        <div class="text-center p-6 rounded-xl bg-gray-50 feature-card transition-colors group shadow-sm">
-          <div class="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-blue-600 text-white mb-4 group-hover:bg-blue-700 transition-colors">
-            <!-- Target -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <circle cx="12" cy="12" r="6"></circle>
-              <circle cx="12" cy="12" r="2"></circle>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">PMP MASTER 8</h3>
-          <p class="text-gray-600">Enfoque centrado en entrega continua de valor, principios avanzados de liderazgo y adaptabilidad organizativa.</p>
-        </div>
-        <!-- Feature 2 -->
-        <div class="text-center p-6 rounded-xl bg-gray-50 feature-card transition-colors group shadow-sm">
-          <div class="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-blue-600 text-white mb-4 group-hover:bg-blue-700 transition-colors">
-            <!-- Clock -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">Simulación de Tiempo Real</h3>
-          <p class="text-gray-600">Entrena tu mente con cronómetros realistas adaptados al formato y exigencia del examen real.</p>
-        </div>
-        <!-- Feature 3 -->
-        <div class="text-center p-6 rounded-xl bg-gray-50 feature-card transition-colors group shadow-sm">
-          <div class="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-blue-600 text-white mb-4 group-hover:bg-blue-700 transition-colors">
-            <!-- BookOpen -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">Preguntas Situacionales</h3>
-          <p class="text-gray-600">Escenarios reales complejos diseñados para evaluar la toma de decisiones estratégicas del director de proyectos.</p>
-        </div>
-        <!-- Feature 4 -->
-        <div class="text-center p-6 rounded-xl bg-gray-50 feature-card transition-colors group shadow-sm">
-          <div class="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-blue-600 text-white mb-4 group-hover:bg-blue-700 transition-colors">
-            <!-- Award -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="8" r="7"></circle>
-              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">Retroalimentación Inmediata</h3>
-          <p class="text-gray-600">Explicaciones profundas que te enseñan por qué cada opción es correcta o incorrecta al instante.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Exams Section -->
-  <section class="py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
-    <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto space-y-8">
-        <!-- Exam 1 -->
-        <div class="bg-white rounded-xl shadow-sm p-8 card-hover transition-shadow">
-          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between">
-            <div class="flex-1 mb-6 lg:mb-0">
-              <h3 class="text-2xl font-bold text-gray-900 mb-3">Simulador PMP MASTER 8 – Examen de Práctica Completo</h3>
-              <p class="text-gray-600 text-sm">Preguntas totalmente actualizadas, centradas en escenarios ágiles, híbridos y predictivos alineados con el estándar premium PMP MASTER 8.</p>
-            </div>
-            <a href="pmpexam1.html" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap">
-              Tomar Examen Gratis
             </a>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Udemy CTA -->
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-4 max-w-4xl">
-      <div class="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 md:p-12 text-white text-center shadow-xl">
-        <!-- Podcast Icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-6 text-blue-200">
+<!-- Udemy CTA Section -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <div class="bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 rounded-3xl p-8 md:p-14 text-white text-center shadow-2xl relative overflow-hidden border border-slate-800">
+      <div class="absolute -left-20 -bottom-20 w-64 h-64 bg-indigo-500/10 rounded-full blur-2xl pointer-events-none"></div>
+      <div class="absolute -right-20 -top-20 w-64 h-64 bg-blue-500/10 rounded-full blur-2xl pointer-events-none"></div>
+      
+      <!-- Podcast/Badge Icon -->
+      <div class="w-16 h-16 bg-blue-500/10 border border-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-inner">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10"></circle>
-          <circle cx="12" cy="12" r="5"></circle>
+          <circle cx="12" cy="12" r="4"></circle>
           <line x1="12" y1="2" x2="12" y2="4"></line>
           <line x1="12" y1="20" x2="12" y2="22"></line>
-          <line x1="2" y1="12" x2="4" y2="12"></line>
-          <line x1="20" y1="12" x2="22" y2="12"></line>
-          <line x1="5.64" y1="5.64" x2="7.05" y2="7.05"></line>
-          <line x1="16.95" y1="16.95" x2="18.36" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="16.95" y2="7.05"></line>
-          <line x1="7.05" y1="16.95" x2="5.64" y2="18.36"></line>
         </svg>
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">
-          ¿Listo para Dominar el Examen PMP en Serio?
-        </h2>
-        <p class="text-blue-100 text-lg mb-8 leading-relaxed max-w-3xl mx-auto">
-          Los exámenes de práctica gratuitos son un excelente comienzo, pero para asegurar tu aprobado en el primer intento, necesitas una inmersión completa. En mi curso de preparación avanzado inspirado en el ecosistema <strong>PMP MASTER 8</strong>, dominarás los tres dominios críticos: <strong>Personas (42%)</strong>, <strong>Procesos (50%)</strong> y <strong>Entorno de Negocio (8%)</strong>. Obtendrás simulaciones profundas, explicaciones exhaustivas de cada pregunta situacional, y metodologías de valor ganado y agile-first explicadas de forma didáctica.
-        </p>
-        <a href="https://www.udemy.com/course/pmp-exam-prep-mastery-based-on-pmbok-7th-edition/?referralCode=254FB14904B38D95B252" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-white text-blue-700 font-bold px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors shadow-lg">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+      </div>
+
+      <h2 class="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">
+        ¿Quieres Asegurar tu Aprobado en el Primer Intento?
+      </h2>
+      <p class="text-blue-100 text-base md:text-lg mb-10 leading-relaxed max-w-3xl mx-auto">
+        Los simuladores gratuitos son excelentes para medir tus conocimientos actuales. Sin embargo, para dominar el examen oficial con seguridad total, necesitas la guía paso a paso del curso estrella de <strong>Patricio Cordero, PMP</strong>. Obtendrás un desglose profundo del ECO (Exam Content Outline), metodologías de alto desempeño y más de 250 casos avanzados.
+      </p>
+
+      <a href="https://www.udemy.com/course/pmp-exam-prep-mastery-based-on-pmbok-7th-edition/?referralCode=254FB14904B38D95B252" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-white text-blue-900 font-extrabold px-8 py-4 rounded-xl hover:bg-blue-50 hover:scale-[1.03] active:scale-[0.97] transition-all duration-300 shadow-xl shadow-slate-950/40">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        <span>Acceder al Curso en Udemy</span>
+      </a>
+      <p class="text-blue-300 text-xs mt-6 font-medium tracking-wide">
+        +250 Preguntas Reales • Respuestas con Análisis Situacional Detallado • Acceso de por Vida
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Reasons Grid -->
+<section class="py-20 bg-slate-50 border-t border-slate-100">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-slate-950 mb-4 tracking-tight">
+        Aumenta tus Posibilidades de Éxito
+      </h2>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        Descubre cómo nuestro ecosistema de preparación transforma tus horas de estudio en resultados concretos.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <!-- Reason 1 -->
+      <div class="bg-white p-8 rounded-2xl border border-slate-200/60 premium-card text-left flex items-start space-x-5">
+        <div class="bg-blue-50 p-3 rounded-xl flex-shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"></path>
+            <path d="M6 12v5c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2v-5"></path>
           </svg>
-          <span>Accede al Curso Completo en Udemy</span>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Reconocimiento Global</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Alinea tus habilidades con las demandas más solicitadas por el mercado laboral internacional en gestión de proyectos.</p>
+        </div>
+      </div>
+      <!-- Reason 2 -->
+      <div class="bg-white p-8 rounded-2xl border border-slate-200/60 premium-card text-left flex items-start space-x-5">
+        <div class="bg-indigo-50 p-3 rounded-xl flex-shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 6v6l4 2"></path>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Estudio Flexible e Inteligente</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Practica en cualquier dispositivo y a cualquier hora, analizando tus respuestas de forma asíncrona y a tu ritmo.</p>
+        </div>
+      </div>
+      <!-- Reason 3 -->
+      <div class="bg-white p-8 rounded-2xl border border-slate-200/60 premium-card text-left flex items-start space-x-5">
+        <div class="bg-yellow-50 p-3 rounded-xl flex-shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ca8a04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Enfoque Anti-Fracaso</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Aprende a decodificar las preguntas complejas y trampas del examen PMI, convirtiendo tus puntos débiles en fortalezas.</p>
+        </div>
+      </div>
+      <!-- Reason 4 -->
+      <div class="bg-white p-8 rounded-2xl border border-slate-200/60 premium-card text-left flex items-start space-x-5">
+        <div class="bg-emerald-50 p-3 rounded-xl flex-shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Pensamiento Adaptativo</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Aplica metodologías predictivas, ágiles e híbridas integradas según las restricciones y contextos de cada organización.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white relative overflow-hidden">
+  <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none"></div>
+  <div class="container mx-auto px-4 text-center max-w-4xl relative">
+    <div class="space-y-6">
+      <h2 class="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight">
+        Comienza Tu Camino al Éxito Profesional Hoy Mismo
+      </h2>
+      <p class="text-blue-100 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+        Obtén acceso completo y gratuito al simulador PMP MASTER 8 sin registrar tarjetas ni crear cuentas.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+        <a href="pmpexam1.html" class="inline-flex items-center justify-center bg-white text-blue-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 hover:scale-[1.02] transition-transform duration-200 shadow-xl shadow-indigo-950/20">
+          Comenzar Examen Gratis
         </a>
-        <p class="text-blue-200 text-sm mt-4">
-          +250 preguntas reales • Explicaciones profundas • Enfoque interactivo premium
-        </p>
+        <a href="https://www.udemy.com/course/pmp-exam-prep-mastery-based-on-pmbok-7th-edition/?referralCode=254FB14904B38D95B252" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center border-2 border-white/80 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-colors">
+          Curso en Udemy
+        </a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Reasons -->
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          ¿Por Qué Deberías Tomar Estos Exámenes Antes del Examen Oficial?
-        </h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          No se trata solo de practicar... se trata de prepararte estratégicamente para triunfar.
-        </p>
-      </div>
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- Reason 1 -->
-        <div class="bg-gray-50 p-6 rounded-xl hover:bg-blue-50 transition-colors shadow-sm">
-          <div class="flex items-start space-x-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"></path>
-              <path d="M6 12v5c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2v-5"></path>
-            </svg>
-            <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Inicia tu Camino hacia el Reconocimiento Profesional con el PMP</h3>
-              <p class="text-gray-700">La certificación PMP es altamente valorada en el mercado global y abre puertas a promociones, mayores salarios y roles de liderazgo en gestión de proyectos. Con estos exámenes de práctica, no solo te preparas —te posicionas como candidato competitivo desde el primer día.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Reason 2 -->
-        <div class="bg-gray-50 p-6 rounded-xl hover:bg-blue-50 transition-colors shadow-sm">
-          <div class="flex items-start space-x-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M12 6v6l4 2"></path>
-            </svg>
-            <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Estudia a Tu Propio Ritmo y Convierte Estos Exámenes en Tu Entrenador Personal</h3>
-              <p class="text-gray-700">No necesitas un horario fijo ni un tutor presencial. Estos exámenes están diseñados para adaptarse a tu ritmo: repite las preguntas, analiza tus errores y fortalece tus puntos débiles cuando tú lo decidas. Es como tener un coach de PMP siempre disponible.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Reason 3 -->
-        <div class="bg-gray-50 p-6 rounded-xl hover:bg-yellow-50 transition-colors shadow-sm">
-          <div class="flex items-start space-x-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ca8a04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-              <line x1="12" y1="9" x2="12" y2="13"></line>
-              <line x1="12" y1="17" x2="12.01" y2="17"></line>
-            </svg>
-            <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">¿Por Qué Necesitas Estos Exámenes de Práctica Para Tu Preparación PMP?</h3>
-              <p class="text-gray-700 whitespace-pre-line">Durante tu preparación, tienes DOS opciones:
-
-• Aceptar materiales de revisión ineficientes y tácticas de memorización —sin saber si realmente te están llevando al éxito.
-
-• O elegir una estrategia probada: exámenes realistas, retroalimentación inmediata y análisis profundo de cada pregunta. Estos exámenes son tu herramienta para convertir el estudio en resultados medibles.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Reason 4 -->
-        <div class="bg-gray-50 p-6 rounded-xl hover:bg-green-50 transition-colors shadow-sm">
-          <div class="flex items-start space-x-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-              <polyline points="22 4 12 14.01 9 11.01"></polyline>
-            </svg>
-            <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Domina el Pensamiento Estratégico, No Solo el Contenido</h3>
-              <p class="text-gray-700">El examen PMP actual ya no se trata de memorizar procesos, sino de aplicar principios en contextos cambiantes. Nuestros exámenes te entrenan para pensar como un gerente de proyectos experimentado: priorizar, decidir bajo incertidumbre y entregar valor en cualquier situación.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+<!-- Footer -->
+<footer class="py-12 bg-slate-900 text-slate-400 text-center border-t border-slate-800">
+  <div class="container mx-auto px-4 space-y-6">
+    <div class="flex justify-center items-center space-x-2">
+      <span class="text-lg font-bold text-white">PMP MASTER 8</span>
+      <span class="text-[10px] bg-slate-800 text-slate-300 font-bold px-2 py-0.5 rounded-full">EDICIÓN 2026</span>
     </div>
-  </section>
-
-  <!-- Final CTA -->
-  <section class="py-16 bg-blue-600">
-    <div class="container mx-auto px-4 text-center">
-      <div class="max-w-3xl mx-auto">
-        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-16 h-16 text-white mx-auto mb-6 opacity-90">
-          <path d="M9 18h6"></path>
-          <path d="M10 22h4"></path>
-          <path d="M18 16a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-4Z"></path>
-          <path d="M12 11V8"></path>
-          <path d="M9 8h6"></path>
-          <path d="M12 3v5"></path>
-        </svg>
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
-          ¡Aprueba tu Examen con el Ecosistema PMP MASTER 8!
-        </h2>
-        <p class="text-blue-100 text-lg mb-8">
-          Combina la práctica gratuita de nuestros simuladores con el aprendizaje avanzado del curso experto.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="pmpexam1.html" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg">
-            Practicar Gratis Ahora
-          </a>
-          <a href="https://www.udemy.com/course/pmp-exam-prep-mastery-based-on-pmbok-7th-edition/?referralCode=254FB14904B38D95B252" target="_blank" rel="noopener noreferrer" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors">
-            Ir al Curso Completo
-          </a>
-        </div>
-      </div>
+    <p class="text-sm max-w-md mx-auto leading-relaxed">Plataforma premium e independiente para la preparación del examen de certificación PMP® bajo la dirección académica de Patricio Cordero, PMP.</p>
+    <p class="text-xs">&copy; 2026 PMP MASTER 8. Todos los derechos reservados.</p>
+    <div class="flex justify-center space-x-6 text-xs pt-2">
+      <a href="privacidad.html" class="hover:text-white transition-colors">Política de Privacidad</a>
+      <a href="terminos.html" class="hover:text-white transition-colors">Términos de Servicio</a>
+      <a href="cookies.html" class="hover:text-white transition-colors">Política de Cookies</a>
+      <a href="contacto.html" class="hover:text-white transition-colors">Contacto</a>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-8 bg-gray-900 text-gray-400 text-center border-t border-gray-800">
-    <div class="container mx-auto px-4 space-y-4">
-      <p>&copy; 2026 PMP MASTER 8. Todos los derechos reservados.</p>
-      <div class="flex justify-center space-x-6 text-sm">
-        <a href="privacidad.html" class="hover:text-white transition-colors">Política de Privacidad</a>
-        <a href="terminos.html" class="hover:text-white transition-colors">Términos de Servicio</a>
-        <a href="cookies.html" class="hover:text-white transition-colors">Política de Cookies</a>
-        <a href="contacto.html" class="hover:text-white transition-colors">Contacto</a>
-      </div>
-    </div>
-  </footer>
+  </div>
+</footer>
 
 </body>
 </html>

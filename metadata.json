@@ -1,6 +1,6 @@
 {
-  "name": "PMP Master Exam",
-  "description": "Domina el examen PMP con exámenes de práctica gratuitos y un curso completo basado en la 7.ª edición del PMBOK®.",
+  "name": "PMP MASTER 8",
+  "description": "Domina la certificación PMP con PMP MASTER 8. Simuladores de práctica gratuitos de alto nivel en español con enfoque ágil, híbrido y predictivo.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"

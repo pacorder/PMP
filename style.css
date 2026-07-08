@@ -1,225 +1,227 @@
-/* style.css - Estilos completos para el examen */
-.option-btn {
-    width: 100%;
-    text-align: left;
-    padding: 16px 20px;
-    border: 2px solid #e2e8f0;
-    border-radius: 12px;
+/* style.css - Estilos Premium completos para PMP MASTER 8 */
+
+/* Custom CSS Variables */
+:root {
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --primary-light: #eff6ff;
+    --accent: #4f46e5;
+    --accent-hover: #4338ca;
+    --neutral-dark: #0f172a;
+    --neutral-light: #f8fafc;
+    --success: #10b981;
+    --success-light: #f0fdf4;
+    --danger: #ef4444;
+    --danger-light: #fef2f2;
+}
+
+/* Base Styles & Modern Transitions */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom premium card animations & shadows */
+.premium-card {
+    background: white;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.03), 0 2px 8px -1px rgba(15, 23, 42, 0.02);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.premium-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(37, 99, 235, 0.2);
+    box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(37, 99, 235, 0.05);
+}
+
+/* Option Buttons inside the Exam */
+.option-item {
+    display: flex;
+    align-items: center;
+    padding: 18px 22px;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
     background: white;
     cursor: pointer;
-    transition: all 0.2s ease;
-    font-size: 16px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     color: #334155;
-    display: flex;
-    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
 }
 
-.option-btn:hover {
+.option-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 100% 100%, rgba(37, 99, 235, 0.03) 0%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.option-item:hover {
     border-color: #3b82f6;
     background: #f8fafc;
+    transform: translateX(4px);
 }
 
-.option-btn.selected {
+.option-item:hover::after {
+    opacity: 1;
+}
+
+.option-item.selected {
     border-color: #2563eb;
-    background: #eff6ff;
-    color: #1e40af;
+    background: #f0f6ff;
+    color: #1e3a8a;
+    box-shadow: 0 4px 12px -2px rgba(37, 99, 235, 0.12), inset 0 0 0 1px rgba(37, 99, 235, 0.1);
+    font-weight: 500;
 }
 
-.option-letter {
+/* Custom Letter Badge inside Options */
+.option-item .option-badge {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
-    background: #e2e8f0;
-    margin-right: 15px;
-    font-weight: bold;
+    background: #f1f5f9;
+    color: #64748b;
+    margin-right: 16px;
+    font-weight: 700;
+    font-size: 14px;
+    border: 1px solid #e2e8f0;
     flex-shrink: 0;
+    transition: all 0.25s ease;
 }
 
-.option-btn.selected .option-letter {
+.option-item:hover .option-badge {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.option-item.selected .option-badge {
     background: #2563eb;
     color: white;
+    border-color: #2563eb;
+    box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
 }
 
-/* Estilos para los resultados */
-.domain-performance {
-    margin-bottom: 30px;
-    padding: 20px;
-    background: #f8fafc;
-    border-radius: 12px;
-    border: 2px solid #e2e8f0;
+/* Domain Badge Customization */
+.domain-pill {
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-.domain-performance h3 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #1e293b;
-    font-size: 20px;
+/* Results Screens & Scoring Metrics */
+.score-circle {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: conic-gradient(var(--success) var(--score-angle, 0deg), #f1f5f9 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.1);
 }
 
-.domain-scores {
+.score-circle-inner {
+    width: 124px;
+    height: 124px;
+    border-radius: 50%;
+    background: white;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-}
-
-.domain-score-item {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 12px 15px;
-    background: white;
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
+    justify-content: center;
 }
 
-.domain-name {
-    font-weight: 600;
-    font-size: 16px;
-    padding: 4px 12px;
+/* Detailed Results view cards */
+.result-card {
+    padding: 24px;
     border-radius: 20px;
-    color: white;
-    text-transform: uppercase;
-}
-
-.domain-name.people {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-}
-
-.domain-name.process {
-    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-}
-
-.domain-name.business-environment {
-    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-}
-
-.domain-score {
-    font-size: 18px;
-    font-weight: 700;
-    min-width: 50px;
-    text-align: right;
-}
-
-.questions-results h3 {
-    text-align: center;
+    border: 1px solid #e2e8f0;
+    background: white;
+    box-shadow: 0 4px 15px -3px rgba(15, 23, 42, 0.03);
     margin-bottom: 20px;
-    color: #1e293b;
-    font-size: 20px;
+    transition: transform 0.2s ease;
 }
 
-.result-item {
-    padding: 20px;
-    border-radius: 12px;
-    border: 2px solid #e2e8f0;
+.result-card.correct {
+    border-left: 5px solid #10b981;
+}
+
+.result-card.incorrect {
+    border-left: 5px solid #ef4444;
+}
+
+.result-card h4 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* Domain Score Progress bars */
+.progress-track {
+    width: 100%;
+    background-color: #f1f5f9;
+    border-radius: 9999px;
+    height: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill-bar {
+    height: 100%;
+    border-radius: 9999px;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Glassmorphism navigation bar */
+.premium-navbar {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Micro animations */
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 15px rgba(37, 99, 235, 0.2); }
+    50% { box-shadow: 0 0 25px rgba(37, 99, 235, 0.4); }
+}
+
+.pulse-primary {
+    animation: pulseGlow 3s infinite;
+}
+
+/* Decorative dot grid background pattern */
+.dot-grid {
+    background-image: radial-gradient(#e2e8f0 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+}
+
+/* Custom scrollbars for premium look */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
     background: #f8fafc;
 }
 
-.result-item.correct {
-    border-color: #10b981;
-    background: #f0fdf4;
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
 }
 
-.result-item.incorrect {
-    border-color: #ef4444;
-    background: #fef2f2;
-}
-
-.result-item h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #1e293b;
-}
-
-.result-item .domain-info {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #3b82f6;
-}
-
-.result-item p {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 8px;
-    color: #475569;
-}
-
-.result-item .correct-answer {
-    color: #10b981;
-    font-weight: 600;
-}
-
-.result-item .explanation {
-    color: #3b82f6;
-    font-style: italic;
-}
-
-.all-correct-message {
-    text-align: center;
-    padding: 20px;
-    background: #f0fdf4;
-    border-radius: 12px;
-    border: 2px solid #10b981;
-}
-
-.all-correct-message h3 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #10b981;
-    margin-bottom: 10px;
-}
-
-.all-correct-message p {
-    color: #334155;
-    font-size: 16px;
-}
-
-/* Estilos para el puntaje */
-.score-percentage.pass {
-    color: #10b981;
-}
-
-.score-percentage.fail {
-    color: #ef4444;
-}
-
-.result-message.pass {
-    color: #10b981;
-}
-
-.result-message.fail {
-    color: #ef4444;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .option-btn {
-        padding: 14px 16px;
-        font-size: 14px;
-    }
-    
-    .domain-scores {
-        gap: 10px;
-    }
-    
-    .domain-score-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-    }
-    
-    .domain-score {
-        text-align: left;
-    }
-    
-    .result-item {
-        padding: 15px;
-    }
-    
-    #score-percentage {
-        font-size: 48px;
-    }
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
 }
